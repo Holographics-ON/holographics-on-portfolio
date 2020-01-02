@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>Background glitch </title>
+        <style>
+                body {
+                    margin: 0;
+                }
+                #c {
+                    width: 100vw;
+                    height: 100vh;
+                    display: block;
+                }
+                </style>
+    </head>
+    <body>
+         <canvas id="c"></canvas>
+    </body>
+    <script type="module">
+    import * as THREE from './js/threejs/r112/build/three.module.js';
+
+    function init() {
+        const canvas = document.querySelector('#c');
+
+        // Must specify alpha paramter to use
+        const renderer = new THREE.WebGLRenderer({
+            canvas,
+            alpha:true,
+            premultipliedAlpha: false, 
+        });
+
+        const fov = 75;
+        const aspect = 2; //canvas default aspect
+        const near = 0.1;
+        const far = 5;
+        const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+        camera.position.z = 3;
+        
+        const scene = new THREE.Scene();
+
+        {
+        const color = 0xFFFFFF;
+        const intensity = 1;
+        const light = new THREE.DirectionalLight(color, intensity) ;
+        light.position.set(-1, 2, 4);
+        scene.add(light);
+        }
+
+        const boxWidth = 1;
+        const boxHeight = 1;
+        const boxDepth = 1;
+        const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+
+        // Modify opacity in material
+        const material = new THREE.MeshPhongMaterial({color: 0xffaa00})
+
+        const sphere = new THREE.Mesh(geometry, material);
+        scene.add(sphere);
+
+        function animate(time) {
+            time *= 0.00015; //convert time to seconds
+        
+            sphere.rotation.x = time;
+            sphere.rotation.y = time;
+
+            renderer.render(scene, camera);
+        
+            requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+    }
+
+    init();
+    </script>
+</html>
