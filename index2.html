@@ -29,7 +29,7 @@
         const near = 0.1;
         const far = 5;
         const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-        camera.position.z = 3;
+        camera.position.z = 3.5;
         
         const scene = new THREE.Scene();
 
@@ -41,7 +41,7 @@
         scene.add(light);
         }
 
-        const radius = 0.8;
+        const radius = 1;
         const widthSegments = 25;
         const heightSegments = 5;
         const geometry = new THREE.SphereGeometry(radius, widthSegments, heightSegments);
