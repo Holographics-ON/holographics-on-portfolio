@@ -41,7 +41,7 @@
         scene.add(light);
         }
 
-        const radius = 1;
+        const radius = 0.8;
         const widthSegments = 25;
         const heightSegments = 5;
         const geometry = new THREE.SphereGeometry(radius, widthSegments, heightSegments);
@@ -49,7 +49,7 @@
         // Modify opacity in material
         const material = new THREE.MeshPhongMaterial({
             color: 0x9932cc,
-            opacity: 0.7,
+            opacity: 0.8,
             wireframe: false,
             emissive: 0x4682b4,
             emissiveIntensity : 0.8,
