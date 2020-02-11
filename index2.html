@@ -13,10 +13,20 @@
     </body>
     <script type="module">
     import * as THREE from './js/threejs/r112/build/three.module.js';
+    import {CopyShader} from './js/threejs/r112/examples/jsm/shaders/CopyShader.js';
+    import {AfterimageShader} from './js/threejs/r112/examples/jsm/shaders/AfterimageShader.js';
+    import {DigitalGlitch} from './js/threejs/r112/examples/jsm/shaders/DigitalGlitch.js';
+
+    import {EffectComposer} from './js/threejs/r112/examples/jsm/postprocessing/EffectComposer.js';
+    import {RenderPass} from './js/threejs/r112/examples/jsm/postprocessing/RenderPass.js';
+    import {MaskPass} from './js/threejs/r112/examples/jsm/postprocessing/MaskPass.js';
+    import {ShaderPass} from './js/threejs/r112/examples/jsm/postprocessing/ShaderPass.js';
+    import {AfterimagePass} from './js/threejs/r112/examples/jsm/postprocessing/AfterimagePass.js';
+    import {GlitchPass} from './js/threejs/r112/examples/jsm/postprocessing/GlitchPass.js';
 
     function init() {
         const canvas = document.querySelector('#c');
-
+        
         // Must specify alpha paramter to use
         const renderer = new THREE.WebGLRenderer({
             canvas,
@@ -32,33 +42,44 @@
         camera.position.z = 3.5;
         
         const scene = new THREE.Scene();
-
-        {
-        const color = 0xFFFFFF;
-        const intensity = 1;
-        const light = new THREE.DirectionalLight(color, intensity) ;
-        light.position.set(-1, 2, 4);
-        scene.add(light);
-        }
-
-        const radius = 1;
-        const widthSegments = 25;
-        const heightSegments = 5;
-        const geometry = new THREE.SphereGeometry(radius, widthSegments, heightSegments);
+        scene.background = new THREE.Color ( "white");
+        
+        const radius = 1.25;
+        const widthSegments = 16;
+        const heightSegments = 12;
+        const phiLength = Math.PI * 2;
+        const thetaLength = Math.PI;
+        const geometry = new THREE.SphereBufferGeometry(radius, widthSegments, heightSegments, 0, phiLength, 0, thetaLength);
 
         // Modify opacity in material
-        const material = new THREE.MeshPhongMaterial({
-            color: 0x9932cc,
-            opacity: 0.8,
+        const material = new THREE.MeshNormalMaterial({
+            opacity: 0.7,
+            flatShading: true,
             wireframe: false,
-            emissive: 0x4682b4,
-            emissiveIntensity : 0.8,
+            depthTest: true,
+            depthWrite: true,
+            transparent: true,
             });
 
         const sphere = new THREE.Mesh(geometry, material);
         scene.add(sphere);
 
-            
+        // Post-processing
+        const composer = new EffectComposer( renderer );
+        composer.addPass( new RenderPass( scene, camera ) );
+
+        const afterimagePass = new AfterimagePass(
+        );
+        composer.addPass( afterimagePass );
+
+        const glitchPass = new GlitchPass(
+            12,
+        );
+
+        glitchPass.renderToScreen = true;
+
+        composer.addPass( glitchPass );
+
         function resizeRendererToDisplaySize(renderer) {
             //Only changes the display size if it returns true
             const canvas = renderer.domElement;
@@ -75,21 +96,26 @@
 
         }
 
-        function animate(time) {
+        let then = 0;
+        function animate(now) {
             //convert time to seconds
-            time *= 0.00015; 
-            
+            now *= 0.0001; 
+            const deltaTime = now - then;
+            then = now;
+
             //Match the aspect of the camera to the aspect of canvas display size
             if(resizeRendererToDisplaySize(renderer)) {
                 const canvas = renderer.domElement;
                 camera.aspect = canvas.clientWidth/ canvas.clientHeight;
                 camera.updateProjectionMatrix();
+                composer.setSize(canvas.width, canvas.height);
             }
+            
+            sphere.rotation.y = now * 2;
+            sphere.rotation.x = now * 3;
+            sphere.rotation.z = now * -1;
 
-            sphere.rotation.x = time;
-            sphere.rotation.y = time * 2;
-
-            renderer.render(scene, camera);
+            composer.render(deltaTime);
         
             requestAnimationFrame(animate);
         }
