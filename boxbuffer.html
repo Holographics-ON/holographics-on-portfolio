@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BoxBuffer Geometry - Sample</title>
+    <style>
+        body { margin:0; }
+        canvas { display: block; }
+    </style>
+    
+</head>
+<body>
+
+    <script type="module">
+        // Testing out ES6 importing preferred method
+        import * as THREE from './js/threejs/r112/build/three.module.js'
+        import {OrbitControls} from './js/threejs/r112/examples/jsm/controls/OrbitControls.js';
+        
+        let scene, camera ,renderer ,geometry ,material, controls, box;
+
+        function init() {
+            camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+            camera.position.z = 5;
+            scene = new THREE.Scene();
+            
+            {
+            const color = 0xFFFFFF;
+            const intensity = 1;
+            const light = new THREE.AmbientLight(color, intensity);
+            scene.add(light);
+            }
+            
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            document.body.appendChild( renderer.domElement );
+
+            geometry = new THREE.BoxBufferGeometry( 2, 2, 2 );
+            material = new THREE.MeshPhongMaterial({color: "dodgerblue" } );
+            var wireframe = new THREE.WireframeGeometry( geometry );
+            var line = new THREE.LineSegments( wireframe );
+            
+            line.material.depthTest = false;
+            line.material.opacity = 0.3;
+            line.material.transparent = true;
+              
+            box = new THREE.Mesh( geometry, material );
+            box.add( line ); 
+            scene.add( box );
+
+            controls = new OrbitControls( camera, renderer.domElement );
+            controls.target.set( 0,0,0 );
+            controls.update();
+
+      }
+
+      function resizeRendererToDisplaySize(renderer) {
+            //Only changes the display size if it returns true
+            const canvas = renderer.domElement;
+            const pixelRatio = window.devicePixelRatio;
+            const width = canvas.clientWidth * pixelRatio | 0;
+            const height = canvas.clientHeight * pixelRatio | 0;
+            const needResize = canvas.width !== width || canvas.height !== height;
+            if (needResize) {
+                // False needed as it stops the default sets of canvas CSS's size
+                renderer.setSize(width, height, false);
+            }
+            // Returns if truthy the width or height has diff values
+            return needResize;
+
+        }
+
+      function animate() {
+            requestAnimationFrame( animate );
+
+                        if(resizeRendererToDisplaySize(renderer)) {
+                const canvas = renderer.domElement;
+                camera.aspect = canvas.clientWidth/ canvas.clientHeight;
+                camera.updateProjectionMatrix();
+            }
+
+            box.rotation.x += 0.005;
+            box.rotation.y += 0.005;
+
+            renderer.render( scene, camera );
+      }
+
+      init()
+      animate()
+  </script>
+</body>
+</html>
