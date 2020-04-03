@@ -1,6 +1,6 @@
 h3 {
     color: sandybrown;
-    font-size: 20pt;
+    font-size: 26px;
     margin: auto;
 }
 #c {
@@ -59,6 +59,25 @@ p {
 .navbar a.active {
     background-color: #4caf50;
     color: white;
+}
+
+/* Both Orientation */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
+    h3 {
+        font-size: 22px;
+    }
+    p {
+        padding-top: 10px;
+        padding-bottom: 0px;
+        font-size: 14px;
+    }
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    .navbar {
+        padding-top: 60%;
+    }
 }
 
 /* .portfolio-content {
