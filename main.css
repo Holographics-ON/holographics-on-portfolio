@@ -1,18 +1,21 @@
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: darkslategray
-
+    overflow: hidden;
 }
-
 h3 {
     color: sandybrown;
-    font-size: 20pt;  
+    font-size: 20pt;
+    margin: auto;
 }
 #c {
     width: 100vw;
     height: 100vh;
     display: block;
+}
+
+p {
+    margin-bottom: 300px;
+    font-size: 16px;
+    font-weight: lighter;
 }
 
 #background {
@@ -25,20 +28,37 @@ h3 {
     z-index: -1;
     border: none;
     pointer-events: none;
-    
 }
-
 .content {
-    padding: 1em;
-    margin-bottom: 20em;
+    display: grid;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkslategray;
+    grid-template-rows: 1fr 5fr;
 }
 
-.content>* {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+.content > * {
+    max-width: 768px;
 }
 
-.portfolio-content {
-    padding: 1em;
+/* Justify / align switches directions */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 18px;
 }
+
+.navbar a:hover {
+    color: orangered;
+}
+
+.navbar a.active {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* .portfolio-content {
+    padding: 1em;
+} */
