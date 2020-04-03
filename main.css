@@ -1,26 +1,20 @@
-body {
-    overflow: hidden;
-}
 h3 {
     color: sandybrown;
     font-size: 20pt;
     margin: auto;
 }
 #c {
-    width: 100vw;
+    width: 98vw;
     height: 100vh;
-    display: block;
 }
 
 p {
-    margin-bottom: 300px;
     font-size: 16px;
     font-weight: lighter;
 }
 
 #background {
     position: fixed;
-    display: block;
     width: 100vw;
     height: 100vh;
     left: 0;
