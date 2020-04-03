@@ -13,8 +13,11 @@ h3 {
 }
 
 p {
+    margin: 0px;
     font-size: 16px;
     font-weight: lighter;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #background {
