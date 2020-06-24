@@ -236,3 +236,13 @@ a {
         }
     }
 }
+
+@media (orientation: landscape){
+.info {
+    visibility: visible;
+    color: #121212;
+    max-width: 100%;
+    padding: 0px 10px;
+    animation: animated-info 2s;
+    font-size: 16px;
+}
