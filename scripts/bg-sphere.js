@@ -1,5 +1,4 @@
 import * as THREE from "./threejs/r117/build/three.module.js";
-// import { OrbitControls } from "./threejs/r117/examples/jsm/controls/OrbitControls.js";
 
 let camera, scene, renderer, geometry, material, sphere, canvas;
 
@@ -52,23 +51,6 @@ function init() {
     });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
-
-    // Controls
-
-    // const controls = new OrbitControls(camera, renderer.domElement);
-
-    // controls.enableDamping = true;
-    // controls.dampingFactor = 0.05;
-
-    // controls.screenSpacePanning = false;
-
-    // controls.maxPolarAngle = Math.PI / 2; Sets the maximum rotation angle
-
-    // let geometry = new THREE.OctahedronGeometry(1);
-    // let material = new THREE.MeshNormalMaterial();
-
-    // let octahedron = new THREE.Mesh(geometry, material);
-    // scene.add(octahedron);
 
     function render() {
         renderer.render(scene, camera);
