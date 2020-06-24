@@ -6,7 +6,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0, user-scalable=yes"
         />
-        <link href="main.css" rel="stylesheet" />
+        <link href="styles/main.css" rel="stylesheet" />
         <title>Background glitch</title>
     </head>
     <body>
@@ -34,7 +34,7 @@
             const renderer = new THREE.WebGLRenderer({
                 canvas,
                 alpha: true,
-                premultipliedAlpha: false
+                premultipliedAlpha: false,
             });
 
             const fov = 75;
@@ -42,11 +42,10 @@
             const near = 0.1;
             const far = 5;
             const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-            camera.position.z = 3.5;
-            camera.position.y = 0.15;
+            camera.position.z = 3.75;
 
             const scene = new THREE.Scene();
-            scene.background = new THREE.Color("white");
+            scene.background = new THREE.Color("whitesmoke");
 
             const radius = 1.15;
             const widthSegments = 16;
@@ -70,13 +69,13 @@
                 wireframe: false,
                 depthTest: true,
                 depthWrite: true,
-                transparent: true
+                transparent: true,
             });
 
             const sphere = new THREE.Mesh(geometry, material);
             scene.add(sphere);
 
-            // Post-processing
+            // // Post-processing
             const composer = new EffectComposer(renderer);
             composer.addPass(new RenderPass(scene, camera));
 

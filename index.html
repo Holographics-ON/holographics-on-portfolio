@@ -2,48 +2,66 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, user-scalable=yes"
-        />
-        <link href="main.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="styles/main.css" rel="stylesheet" />
+        <script src="scripts/typewriter.js"></script>
+        <script
+            src="https://kit.fontawesome.com/3b922a8931.js"
+            crossorigin="anonymous"
+        ></script>
         <title>Holographics-ON - Creative Portfolio</title>
     </head>
     <body>
-        <iframe id="background" src="index-bg.html"></iframe>
-        <div class="content">
-            <h3>
-                Holographics-ON - An experimental project working with 3D
-                interactive content
-            </h3>
-            <p>
-                Preparing for the future of graphics ~ WebGPU ~ VR/MR/AR ~ WebVR
-                <br />
-                <br />
-                A revolving low-poly sphere with added post-processing glitch
-                shader effect - my first experimental sketch using 3D WebGL
-                graphics
-            </p>
-            <div class="navbar">
-                <a href="#bio">BIO</a>
-                <a href="#news">PROJECT INFO</a>
-                <a href="#home">ALTERNATIVE CODING</a>
-                <a href="#about">PROTOTYPE SKETCHES</a>
-                <a href="#contact">CONTACT</a>
-                <a
-                    href="javascript:void(0);"
-                    class="icon"
-                    onclick="myFunction()"
-                    >&#9776;</a
-                >
+        <iframe id="background" src="bg-test.html" scrolling="no"></iframe>
+        <div class="container">
+            <div class="title">
+                <a href="index.html"><p class="resolve"></p></a>
+            </div>
+            <h2>
+                An experimental project | 3D interactive web | created by
+                <span id="name">HON</span>
+            </h2>
+
+            <div class="overlay">
+                <div class="info">
+                    <h3>HELLO WORLD</h3>
+                    <p>
+                        A multi-coloured revolving low-poly sphere - my first
+                        experimental sketch using THREE.js to create 3D WebGL
+                        graphics
+                        <br />
+                        <br />
+                        Preparing for the future of graphics ~ WebGPU ~ VR/MR/AR
+                        ~ WebXR
+                        <br />
+                        <br />
+                        WELCOME TO THE MODERN WEB
+                    </p>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <a href="bio.html"><li>BIO</li></a>
+                        <a href="info.html"><li>PROJECT INFO</li></a>
+                        <a href="sketches.html"><li>CREATIVE SKETCHES</li></a>
+                        <a href="contact.html"><li>CONTACT</li></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="links">
+                <a href="https://github.com/Holographics-ON"
+                    ><i class="fab fa-github fa-3x"></i
+                ></a>
+                <a href="https://www.instagram.com/holographics_on/"
+                    ><i class="fab fa-instagram fa-3x"></i
+                ></a>
+                <a href="https://linkedin.com/in/weng-chan-bb6b7688"
+                    ><i class="fab fa-linkedin fa-3x"></i
+                ></a>
+                <a href="mailto:weng.chan@hotmail.com"
+                    ><i class="far fa-envelope fa-3x"></i
+                ></a>
             </div>
         </div>
-
-        <!-- <div class="portfolio-content content" >
-        <h4>Creative Portfolio - Fundamental graphics sketches</h4>
-        <ul>
-            <li><a href= "boxbuffer.html" title="BoxbufferGeometry Orbit"> BoxbufferGeometry</a> - Utilising Orbital Controls </li>
-        </ul>
-    </div> -->
     </body>
 </html>
