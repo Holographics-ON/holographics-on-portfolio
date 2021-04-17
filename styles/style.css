@@ -377,6 +377,7 @@ a {
         max-width: 100%;
         padding: 3px 0px;
         border-radius: 7px;
+        object-fit: contain;
     }
 
     .return {
