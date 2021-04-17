@@ -135,7 +135,7 @@ img {
     color: whitesmoke;
     margin: 0px 30px;
     position: absolute;
-    text-align: center;
+    padding-left: 0px;
     bottom: 5%;
 }
 
