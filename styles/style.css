@@ -372,10 +372,11 @@ a {
     }
 
     img {
-        width: 33.3%;
+        width: 49%;
         max-width: 100%;
         padding: 3px 0px;
         border-radius: 7px;
+        object-fit: scale-down;
     }
 
     .return {
