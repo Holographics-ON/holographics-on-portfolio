@@ -5,7 +5,11 @@ body {
 }
 
 .container {
-    padding: 8px;
+    padding: 0px 8px;
+}
+
+.container-portfolio {
+    background: whitesmoke;
 }
 
 .title {
@@ -52,44 +56,105 @@ h2 {
     font-size: 16px;
     max-width: max-content;
     padding: 15px 10px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .overlay {
+    background: rgba(245, 245, 245, 0.22);
+}
+
+.gallery {
+    display: flex;
     background-color: whitesmoke;
-    opacity: 0.45;
-    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 20px;
+    align-content: flex-start;
+    padding-bottom: 5px;
+    transition: 0.15s transform;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.gallery-grid {
+    overflow: hidden;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.01);
+    opacity: 0.8;
 }
 
 .info h3 {
-    margin-top: 0;
+    margin: 5px 0px;
+    width: 100%;
 }
 
 .info {
     visibility: visible;
-    color: #121212;
+    color: #121212ba;
     max-width: 100%;
     padding: 0px 10px;
     animation: animated-info 2s;
 }
 
-.nav {
+.modal {
     display: flex;
-    padding: 30px 0px;
+    background: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     justify-content: center;
-    max-width: 25%;
-    padding: 10px 0;
+    align-items: flex-end;
+    opacity: 0;
+    pointer-events: none;
 }
 
-.nav a {
+.modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.full-img {
+    align-self: center;
+    justify-content: space-around;
+    max-width: 90%;
+    transform: scale(0.85);
+    transition: 0.1s ease-in-out;
+}
+
+.full-img.open {
+    transform: scale(1.2);
+}
+
+.modal p {
     color: whitesmoke;
+    margin: 0px 30px;
+    position: absolute;
+    bottom: 5%;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 30%;
+    padding: 5px 0px;
+}
+
+.nav ul {
+    padding-left: 10px;
 }
 
 li {
     padding: 11px;
     border-radius: 1px;
     margin-bottom: 15px;
-    color: #121212;
+    color: #121212ba;
     border-left: solid 10px limegreen;
     list-style: none;
     transition: 0.4s;
@@ -104,6 +169,12 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+.return {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .links {
     display: flex;
     max-width: 100%;
@@ -163,13 +234,17 @@ a {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 813px) {
     body {
         background-color: whitesmoke;
     }
 
     .container {
         margin: 0 25px;
+    }
+
+    .container-portfolio {
+        background: none;
     }
 
     #background {
@@ -193,16 +268,37 @@ a {
 
     .overlay {
         visibility: collapse;
-        opacity: 0.8;
+    }
+
+    .gallery {
+        background: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .gallery-grid {
+        display: inline-flex;
+        padding-top: 10px;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+    }
+
+    img {
+        width: 33.33%;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 15px;
+        padding-bottom: 0px;
     }
 
     .info {
-        visibility: visible;
+        display: flex;
         color: slategray;
-        max-width: 45%;
+        max-width: 48%;
+        flex-wrap: wrap;
     }
     .resolve {
-        /* border: whitesmoke solid 1px; */
         color: #121212;
         margin-bottom: 0px;
         font-family: Arial, Helvetica, sans-serif;
@@ -215,8 +311,20 @@ a {
         max-width: 610px;
     }
 
+    .full-img.open {
+        transform: scale(1.55);
+    }
+
     .nav {
         visibility: visible;
+    }
+
+    .nav ul {
+        padding-left: 50px;
+    }
+
+    .return {
+        padding: 0px;
     }
 
     /* text animation */
@@ -239,13 +347,45 @@ a {
     }
 }
 
-@media only screen and (max-width: 480px) and (orientation: landscape) {
+@media only screen and (max-height: 420px) and (orientation: landscape) {
+    .container-portfolio {
+        background: whitesmoke;
+    }
+
     .info {
         visibility: visible;
-        color: #121212;
+        color: #121212ba;
         max-width: 100%;
         padding: 0px 10px;
         animation: animated-info 2s;
         font-size: 14px;
+    }
+
+    .full-img.open {
+        transform: scale(0.9);
+    }
+
+    .gallery-grid {
+        display: inline-flex;
+        justify-content: space-around;
+        flex-flow: row wrap;
+    }
+
+    img {
+        width: 49%;
+        max-width: 100%;
+        max-height: 100%;
+        padding: 3px 0px;
+        border-radius: 7px;
+    }
+
+    .return {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    .nav ul {
+        padding-left: 40px;
     }
 }
