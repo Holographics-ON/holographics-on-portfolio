@@ -361,6 +361,10 @@ a {
         font-size: 12px;
     }
 
+    .full-img {
+        transform: scale(0.35);
+    }
+
     .full-img.open {
         transform: scale(0.5);
     }
@@ -373,11 +377,10 @@ a {
 
     img {
         width: auto;
-        height: auto;
         max-width: 49%;
-        padding: 3px 0px;
+        padding: 5px 0px;
         border-radius: 7px;
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .return {
