@@ -358,7 +358,7 @@ a {
         max-width: 100%;
         padding: 0px 10px;
         animation: animated-info 2s;
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .full-img {
@@ -369,11 +369,11 @@ a {
         transform: scale(0.85);
     }
 
-    .gallery-grid {
+    /* .gallery-grid {
         display: inline-flex;
-        justify-content: flex-start;
-        flex-flow: row wrap;
-    }
+        justify-content: space-around;
+        flex-flow: column wrap;
+    } */
 
     img {
         width: 33%;
