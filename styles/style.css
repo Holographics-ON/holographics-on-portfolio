@@ -358,7 +358,7 @@ a {
         max-width: 100%;
         padding: 0px 10px;
         animation: animated-info 2s;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .full-img.open {
@@ -372,7 +372,7 @@ a {
     }
 
     img {
-        width: 49%;
+        width: 33.3%;
         max-width: 100%;
         padding: 3px 0px;
         border-radius: 7px;
