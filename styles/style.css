@@ -378,6 +378,7 @@ a {
     img {
         width: auto;
         max-width: 33%;
+        max-height: 49%;
         padding: 5px 0px;
         border-radius: 7px;
         object-fit: cover;
