@@ -298,6 +298,7 @@ a {
         max-width: 48%;
         flex-wrap: wrap;
     }
+
     .resolve {
         color: #121212;
         margin-bottom: 0px;
@@ -362,24 +363,22 @@ a {
     }
 
     .full-img {
-        transform: scale(0.5);
-    }
-
-    .full-img.open {
         transform: scale(0.85);
     }
 
-    /* .gallery-grid {
-        display: inline-flex;
-        justify-content: space-around;
-        flex-flow: column wrap;
-    } */
+    .full-img.open {
+        transform: scale(1.3);
+    }
 
     img {
         width: 33%;
         max-width: 100%;
         padding: 5px 0px;
         border-radius: 7px;
+    }
+
+    .caption {
+        font-size: 14px;
     }
 
     .return {
