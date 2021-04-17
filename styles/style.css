@@ -373,12 +373,12 @@ a {
         display: inline-flex;
         justify-content: space-around;
         flex-flow: row wrap;
+        max-height: 50%;
     }
 
     img {
         width: auto;
         max-width: 33%;
-        max-height: 25%;
         padding: 5px 0px;
         border-radius: 7px;
         object-fit: cover;
