@@ -132,6 +132,12 @@ img {
     transform: scale(1.2);
 }
 
+.caption {
+    display: flex;
+    font-size: 1rem;
+    justify-self: center;
+}
+
 .modal p {
     color: whitesmoke;
     margin: 0px 30px;
@@ -375,10 +381,6 @@ a {
         max-width: 100%;
         padding: 5px 0px;
         border-radius: 7px;
-    }
-
-    .caption {
-        font-size: 14px;
     }
 
     .return {
