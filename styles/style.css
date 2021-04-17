@@ -362,7 +362,7 @@ a {
     }
 
     .full-img.open {
-        transform: scale(0.9);
+        transform: scale(0.5);
     }
 
     .gallery-grid {
@@ -372,9 +372,9 @@ a {
     }
 
     img {
-        width: 49%;
+        width: auto;
         height: auto;
-        max-width: 100%;
+        max-width: 49%;
         padding: 3px 0px;
         border-radius: 7px;
         object-fit: contain;
