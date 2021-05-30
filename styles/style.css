@@ -444,7 +444,6 @@ a {
     }
 
     .links {
-        background-color: purple;
         visibility: visible;
         justify-content: flex-end;
         padding-right: 10vw;
@@ -578,7 +577,6 @@ a {
     }
 
     .links {
-        background-color: skyblue;
         visibility: visible;
         justify-content: flex-end;
         padding-right: 10vw;
@@ -719,7 +717,6 @@ a {
     }
 
     .links {
-        background-color: yellow;
         visibility: visible;
         justify-content: flex-end;
         padding-right: 10vw;
@@ -767,6 +764,10 @@ a {
     /* iphones landscape */
     .container-portfolio {
         background: whitesmoke;
+    }
+
+    h3 {
+        font-size: 1rem;
     }
 
     .info {
