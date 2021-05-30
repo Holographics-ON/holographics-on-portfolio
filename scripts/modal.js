@@ -18,7 +18,7 @@ previews.forEach((preview) => {
 
 
 modal.addEventListener("click", (e) => {
-    if(e.target.classList.contains("modal")) {
+    if(e.target.classList.contains("open")) {
         modal.classList.remove("open");
         original.classList.remove("open");
     }
