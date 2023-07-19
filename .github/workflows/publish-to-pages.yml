@@ -10,6 +10,7 @@ on:
 
 env:
   NODE_AUTH_TOKEN: ${{ secrets.PORTFOLIO_DEPLOYMENT }}
+  CNAME: holographics-on.xyz
 
 permissions:
   contents: read
