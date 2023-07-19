@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
+
 // Checks for github action and appned prefix
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
+// Init base Path
 let assetPrefix = '';
-let basePath = '/';
+let basePath = '';
 
 if (isGithubActions) {
   const repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
@@ -20,6 +22,10 @@ const nextConfig = {
   },
   assetPrefix: assetPrefix,
   basePath: basePath,
+  webpack(config) {
+    config.cache = true;
+    return config;
+  },
 };
 
 module.exports = nextConfig;

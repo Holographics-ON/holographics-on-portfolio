@@ -43,7 +43,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 0, 0;
     --background-end-rgb: 0, 0, 0;
 
     --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
@@ -95,62 +95,13 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.header {
-  position: absolute;
-  color: white;
-}
-
-.logo {
-  display: flex;
-  font-size: 1.5rem;
-  padding-right: 0.6rem;
-  margin: 1rem;
-  margin-bottom: 0.8rem;
-  color: white;
-  max-width: max-content;
-  border-right: fuchsia solid 15px;
-  animation: animated-cursor 600ms steps(40, end) infinite;
-
-  /* text-decoration: underline dotted lime 7px;
-  text-underline-position: under;
-  text-underline-offset: 0.5rem; */
-}
-
-.threejs-heading {
-  position: absolute;
-  top: 15vh;
-  right: 5vw;
-  left: 65vw;
-  color: azure;
-}
-
-.threejs-p {
-  position: absolute;
-  top: 20vh;
-  right: 5vw;
-  left: 65vw;
-  color: white;
-}
-
-#webgl {
-  height: 100%;
-  position: fixed;
-  outline: none;
-  z-index: -1;
-}
-
-/* to be removed */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-@keyframes animated-cursor {
-  from {
-    /* border-right-color: rgba(0, 255, 0, 0.75); */
-    border-right-color: fuchsia;
-  }
-  to {
-    border-right-color: transparent;
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
   }
 }
