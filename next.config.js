@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// Checks for github action and appned prefix
 const isGithubActions = process.env.GITHUB_ACTIONS || false;
 
 let assetPrefix = '';
