@@ -233,6 +233,16 @@ const HomePage = () => {
                 />
               </a>
             </li>
+            <li>
+              <a href="https://www.linkedin.com/in/weng-chan">
+                <Image
+                  src="/images/linkedin.jpg"
+                  alt="Linkedin profile"
+                  width="128"
+                  height="128"
+                />
+              </a>
+            </li>
           </ul>
         </div>
       </div>
