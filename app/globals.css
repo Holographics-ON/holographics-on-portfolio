@@ -131,7 +131,7 @@ body {
 .intro p {
   color: white;
   border-top: solid 1rem;
-  padding-top: 1rem;
+  padding: 1rem 0;
   border-image: repeating-linear-gradient(135deg, black, orange, black 0.5rem)
     10;
 }
@@ -143,6 +143,15 @@ body {
   z-index: -1;
 }
 
+.socials ul {
+  border: 3px;
+  list-style-type: none;
+}
+
+.socials li img {
+  border: double white 8px;
+  border-radius: 15%;
+}
 /* to be removed */
 a {
   color: inherit;
@@ -189,5 +198,9 @@ a {
   .intro p {
     border-top-width: 1.2rem;
     padding-top: 2rem;
+  }
+
+  .intro ul {
+    color: white;
   }
 }

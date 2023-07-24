@@ -1,8 +1,9 @@
 'use client';
 import * as THREE from 'three';
-import { useEffect } from 'react';
+import { Component, useEffect } from 'react';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import Image from 'next/image';
 
 const HomePage = () => {
   useEffect(() => {
@@ -209,6 +210,7 @@ const HomePage = () => {
   return (
     <>
       <div id="webgl"></div>
+
       <div className="intro">
         <h1>WELCOME TO MY BIO </h1>
         <p>
@@ -219,6 +221,20 @@ const HomePage = () => {
           interest in the upcoming future of WebXR, including the latest
           developments of immersive 3D web. &#9786;
         </p>
+        <div className="socials">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/holographics_on/">
+                <Image
+                  src="/images/insta.jpg"
+                  alt="holographics-on instagram profile"
+                  width="128"
+                  height="128"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );
