@@ -209,15 +209,17 @@ const HomePage = () => {
   return (
     <>
       <div id="webgl"></div>
-      <h1 className="threejs-heading">WELCOME TO MY BIO ! &#9786; </h1>
-      <p className="threejs-p">
-        A UCL graduate in Msc business analytics with specialisation in computer
-        science. Work experience includes working as a junior data scientist for
-        a ski-tech start-up and a market research analyst for an e-SIM
-        technology company A creative coder at heart and have a special interest
-        in the upcoming future of WebXR, including the latest developments of
-        immersive 3D web
-      </p>
+      <div className="intro">
+        <h1>WELCOME TO MY BIO </h1>
+        <p>
+          A UCL graduate in Msc business analytics with specialisation in
+          computer science. Work experience includes working as a junior data
+          scientist for a ski-tech start-up and a market research analyst for an
+          e-SIM technology company A creative coder at heart and have a special
+          interest in the upcoming future of WebXR, including the latest
+          developments of immersive 3D web. &#9786;
+        </p>
+      </div>
     </>
   );
 };
