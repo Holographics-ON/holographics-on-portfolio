@@ -202,22 +202,22 @@ a {
     /* border-right-width: 0.6em; */
   }
 
-  .bio {
+  .intro {
     position: initial;
     max-width: 70vw;
     margin: 2rem;
   }
-  .bio h1 {
+  .intro h1 {
     font-size: clamp(1.6rem, 3.5vw, 2rem);
     padding-bottom: 1rem;
   }
 
-  .bio p {
+  .intro p {
     border-top-width: 1.2rem;
     padding-top: 2rem;
   }
 
-  .bio ul {
+  .intro ul {
     color: white;
   }
 }
