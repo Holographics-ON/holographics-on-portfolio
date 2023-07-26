@@ -223,11 +223,12 @@ const HomePage = () => {
       </div>
       <div className="socials">
         <h3> INSTAGRAM | LINKEDIN </h3>
+        <p>
+          TO CONNECT : <span>SCAN / CLICK</span> the QR code
+        </p>
+        <p> ALTERNATIVELY : Contact me via e-mail &#9786;</p>
+
         <ul>
-          <li>
-            TO CONNECT : <span>SCAN / CLICK</span> the QR code below{' '}
-          </li>
-          <li>ALTERNATIVELY : Contact me by e-mail &#9786;</li>
           <li>
             <a href="https://www.instagram.com/holographics_on/">
               <Image
