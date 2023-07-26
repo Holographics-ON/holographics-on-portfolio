@@ -114,15 +114,24 @@ body {
 }
 
 /* Introduction */
+
+#webgl {
+  height: 100%;
+  position: fixed;
+  outline: none;
+  z-index: -1;
+}
+
 .intro {
   position: absolute;
-  top: 12vh;
-  right: 3vw;
-  left: 60vw;
   max-width: fit-content;
   font-size: 1.6rem;
+  top: 12vh;
+  right: 3vw;
+  left: 65vw;
 }
-.intro h1 {
+
+.intro h2 {
   font-size: 2.4rem;
   padding-bottom: 0.7rem;
   color: wheat;
@@ -136,19 +145,21 @@ body {
     10;
 }
 
-#webgl {
-  height: 100%;
+.socials {
   position: fixed;
-  outline: none;
-  z-index: -1;
+  font-size: 1.6rem;
+  left: 3vw;
+  width: fit-content;
+  bottom: 5vh;
 }
 
 .socials ul {
+  margin-top: 1rem;
   list-style-type: none;
 }
 
 .socials li img {
-  margin-top: 1rem;
+  margin-top: 4rem;
   border: double white 8px;
   border-radius: 15%;
   filter: drop-shadow(8px 12px 15px fuchsia);
@@ -165,7 +176,7 @@ a {
 }
 /* end tbr */
 
-/* socials{
+/* socials stylistic lining{
   border-top: solid 1.6rem;
   border-image: repeating-linear-gradient(135deg, black, white, black 1.2rem) 25;
 } */
@@ -191,22 +202,22 @@ a {
     /* border-right-width: 0.6em; */
   }
 
-  .intro {
+  .bio {
     position: initial;
     max-width: 70vw;
     margin: 2rem;
   }
-  .intro h1 {
+  .bio h1 {
     font-size: clamp(1.6rem, 3.5vw, 2rem);
     padding-bottom: 1rem;
   }
 
-  .intro p {
+  .bio p {
     border-top-width: 1.2rem;
     padding-top: 2rem;
   }
 
-  .intro ul {
+  .bio ul {
     color: white;
   }
 }
