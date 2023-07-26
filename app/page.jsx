@@ -218,14 +218,16 @@ const HomePage = () => {
           scientist for a ski-tech start-up and a market research analyst for an
           e-SIM technology company A creative coder at heart and have a special
           interest in the upcoming future of WebXR, including the latest
-          developments of immersive 3D web. &#9786;
+          developments of immersive 3D web.
         </p>
       </div>
       <div className="socials">
         <h3> INSTAGRAM | LINKEDIN </h3>
         <ul>
-          <li>TO CONNECT : SCAN / CLICK the QR code below </li>
-          <li>ALTERNATIVELY : Contact me by e-mail</li>
+          <li>
+            TO CONNECT : <span>SCAN / CLICK</span> the QR code below{' '}
+          </li>
+          <li>ALTERNATIVELY : Contact me by e-mail &#9786;</li>
           <li>
             <a href="https://www.instagram.com/holographics_on/">
               <Image

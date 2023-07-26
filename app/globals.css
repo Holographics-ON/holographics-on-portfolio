@@ -153,6 +153,14 @@ body {
   bottom: 5vh;
 }
 
+.socials h3 {
+  padding-left: 1rem;
+  border-left: lime 15px solid;
+}
+
+span {
+  font-weight: bolder;
+}
 .socials ul {
   margin-top: 1rem;
   list-style-type: none;
