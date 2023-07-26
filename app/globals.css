@@ -261,6 +261,6 @@ a {
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    min-height: 45vh;
+    min-height: 25em;
   }
 }
