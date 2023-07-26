@@ -171,17 +171,17 @@ body {
   display: flex;
   justify-content: space-around;
   list-style-type: none;
-  margin-top: 2em;
+  margin: 2.5em 0;
 }
 
 .socials li img {
   border: double white 8px;
   border-radius: 15%;
-  filter: drop-shadow(8px 12px 15px fuchsia);
+  filter: drop-shadow(12px 12px 5px fuchsia);
 }
 
 .socials li:last-of-type img {
-  filter: drop-shadow(8px 12px 15px fuchsia) invert(100%);
+  filter: drop-shadow(12px 12px 5px fuchsia) invert(100%);
 }
 
 /* to be removed */
