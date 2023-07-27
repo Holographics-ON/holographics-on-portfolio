@@ -224,10 +224,10 @@ const HomePage = () => {
       <div className="socials">
         <h3> INSTAGRAM | LINKEDIN </h3>
         <p>
-          TO CONNECT : <span>SCAN / CLICK</span> the QR code
+          TO CONNECT: <span>SCAN / CLICK</span> the QR code
         </p>
         <p>
-          ALTERNATIVELY : <a href="mailto:weng.chan@hotmail.com">Contact me</a>
+          ALTERNATIVELY: <a href="mailto:weng.chan@hotmail.com">Contact me</a>
           &nbsp;via e-mail &#9786;
         </p>
 

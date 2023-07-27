@@ -5,9 +5,10 @@ import Header from './components/Header';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: '3D Page',
-  description: 'Web Dev',
-  keywords: 'web dev, 3D modelling, sculpting',
+  title: 'Holographics-ON',
+  description: 'Creative technologist',
+  keywords:
+    'web dev, 3D modelling, 3D sculpting, animation, creative, technologist, creative technologits, creative coder, artist',
 };
 
 export default function RootLayout({ children }) {

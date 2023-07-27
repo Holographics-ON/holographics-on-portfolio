@@ -37,9 +37,7 @@ const Header = () => {
       <div className="container">
         <div className="logo">
           <Link href="/">
-            <h1 data-value=">>/: HOLOGRAPHICS-ON">
-              &gt;&gt;/: HOLOGRAPHICS-ON
-            </h1>
+            <h1 data-value=">>/:HOLOGRAPHICS-ON">&gt;&gt;/:HOLOGRAPHICS-ON</h1>
           </Link>
         </div>
         {/* <div className="links">
