@@ -226,7 +226,10 @@ const HomePage = () => {
         <p>
           TO CONNECT : <span>SCAN / CLICK</span> the QR code
         </p>
-        <p> ALTERNATIVELY : Contact me via e-mail &#9786;</p>
+        <p>
+          ALTERNATIVELY : <a href="mailto:weng.chan@hotmail.com">Contact me</a>
+          &nbsp;via e-mail &#9786;
+        </p>
 
         <ul>
           <li>
