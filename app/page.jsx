@@ -210,6 +210,12 @@ const HomePage = () => {
   return (
     <>
       <div id="webgl"></div>
+      <div className="scroll-down">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div className="intro">
         <h2>WELCOME TO MY BIO </h2>
         <p>
