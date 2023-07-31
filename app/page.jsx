@@ -6,6 +6,13 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import Image from 'next/image';
 
 const HomePage = () => {
+  const onClickScroll = () => {
+    const element = document.querySelector('.scroll-down');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     // 1 - container
     const container = document.getElementById('webgl');
@@ -210,7 +217,7 @@ const HomePage = () => {
   return (
     <>
       <div id="webgl"></div>
-      <div className="scroll-down">
+      <div className="scroll-down" onClick={onClickScroll}>
         <span></span>
         <span></span>
         <span></span>
