@@ -217,13 +217,13 @@ const HomePage = () => {
   return (
     <>
       <div id="webgl"></div>
-      <div className="scroll-down" onClick={onClickScroll}>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
       <div className="intro">
+        <div className="scroll-down" onClick={onClickScroll}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <h2>WELCOME TO MY BIO </h2>
         <p>
           A UCL graduate in Msc business analytics with specialisation in
