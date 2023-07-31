@@ -222,7 +222,7 @@ const HomePage = () => {
           A UCL graduate in Msc business analytics with specialisation in
           computer science. Work experience includes working as a junior data
           scientist for a ski-tech start-up and a market research analyst for an
-          e-SIM technology company A creative coder at heart and have a special
+          e-SIM technology company. A creative coder at heart and have a special
           interest in the upcoming future of WebXR, including the latest
           developments of immersive 3D web.
         </p>
