@@ -55,9 +55,9 @@ body {
   position: absolute;
   bottom: 1vh;
   left: 50%;
-  height: 40px;
-  width: 40px;
-  border: red 1px solid;
+  height: 50px;
+  width: 50px;
+  border: red 7px dashed;
   transform: translate3d(-50%, -80px, 0) rotate(45deg);
 }
 
