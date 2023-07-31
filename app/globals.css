@@ -59,6 +59,7 @@ a {
 .scroll-down {
   display: none;
   position: absolute;
+  bottom: 10px;
   left: 50%;
   height: 50px;
   width: 50px;
