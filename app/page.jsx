@@ -226,12 +226,20 @@ const HomePage = () => {
       <div className="intro">
         <h2>WELCOME TO MY BIO </h2>
         <p>
-          A UCL graduate in Msc business analytics with specialisation in
-          computer science. Work experience includes working as a junior data
-          scientist for a ski-tech start-up and a market research analyst for an
-          e-SIM technology company. A creative coder at heart and have a special
-          interest in the upcoming future of WebXR, including the latest
-          developments of immersive 3D web.
+          A UCL graduate in MSc business analytics with specialisation in
+          computer science. Previously worked as a junior data scientist for a
+          ski-tech start-up and a market research analyst for an e-SIM
+          technology company. After accomplishing all of my skills technically,
+          I dedicated several years into refining my own creative talents out of
+          curiosity. Following this passion soon landed me a position at an
+          award-winning creative agency working as digital analyst. Later on, I
+          received an opportunity to become a creative technologist for a start
+          up called Social Visuals.
+        </p>
+        <p>
+          My name is HON, I'm a creative developer at &hearts;, with a special
+          interest in the upcoming future of immersive 3D web experiences and
+          the latest trend of WebXR & WebGPU.
         </p>
       </div>
       <div className="socials">
