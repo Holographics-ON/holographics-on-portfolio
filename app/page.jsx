@@ -77,7 +77,7 @@ const HomePage = () => {
     audioLoader.load('/audio/reflected-light.mp3', (buffer) => {
       sound.setBuffer(buffer);
       // sound.setLoop(true);
-      sound.context.resume();
+      // sound.context.resume();
       sound.setVolume(0.5);
       sound.setMaxDistance(15);
       sound.setRefDistance(5);
@@ -87,7 +87,7 @@ const HomePage = () => {
         console.log('onEnded');
         sound.isPlaying = false;
       };
-      sound.play();
+      // sound.play();
     });
     console.log(sound.context, 'sound context');
 
@@ -193,13 +193,19 @@ const HomePage = () => {
 
     console.log(renderer.info, 'yet to cleaned');
 
+    const audioElement = document.querySelector('.audio-btn');
+    // Is it clicking twice because of react ??
+    audioElement.addEventListener('click', () => {
+      sound.isPlaying ? sound.pause() : sound.play();
+    });
+
     function cleanup() {
       scene.clear();
       orbitControls.dispose();
       renderer.dispose();
       geometry.dispose();
       material.dispose();
-      sound.stop();
+      sound.disconnect();
     }
 
     animate();
@@ -217,6 +223,7 @@ const HomePage = () => {
   return (
     <>
       <div id="webgl"></div>
+      <button className="audio-btn">AUDIO</button>
       <div className="scroll-down" onClick={onClickScroll}>
         <span></span>
         <span></span>

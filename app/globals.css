@@ -62,6 +62,18 @@ a {
   z-index: -1;
 }
 
+.audio-btn {
+  position: absolute;
+  font-family: var(--font-mono);
+  padding: 0.2em;
+  top: 9vh;
+  right: 3vw;
+  z-index: 1;
+}
+.audio-btn:hover {
+  cursor: pointer;
+}
+
 .scroll-down {
   display: none;
   position: absolute;
@@ -106,9 +118,9 @@ a {
   max-width: fit-content;
   font-family: var(--font-mono);
   font-size: 1.6rem;
-  top: 12vh;
+  top: 9vh;
   right: 3vw;
-  left: 65vw;
+  left: 60vw;
 }
 
 .intro h2 {
