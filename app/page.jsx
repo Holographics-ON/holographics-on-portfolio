@@ -237,7 +237,7 @@ const HomePage = () => {
           up called Social Visuals.
         </p>
         <p>
-          My name is HON, I'm a creative developer at &hearts;, with a special
+          My name is HON, I'm a creative developer at &hearts; with a special
           interest in the upcoming future of immersive 3D web experiences and
           the latest trend of WebXR & WebGPU.
         </p>
