@@ -219,7 +219,7 @@ a {
 }
 
 /* Tablet */
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 80em) {
   #webgl {
     position: initial;
   }
