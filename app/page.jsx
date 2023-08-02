@@ -84,12 +84,10 @@ const HomePage = () => {
       sound.setDistanceModel('exponential');
       sound.setRolloffFactor(12);
       sound.onEnded = () => {
-        console.log('onEnded');
         sound.isPlaying = false;
+        sound.stop();
       };
-      // sound.play();
     });
-    console.log(sound.context, 'sound context');
 
     const geometry = new THREE.TetrahedronGeometry();
     const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
@@ -124,52 +122,6 @@ const HomePage = () => {
 
     // 8. texture background
     scene.fog = new THREE.FogExp2(0x111111, 0.05);
-    /*
-    const textureLoader = new THREE.TextureLoader();
-    textureLoader.load(
-      '/images/background.png',
-
-      function (texture) {
-        texture.minFilter = THREE.LinearFilter;
-        scene.background = texture;
-      },
-      // onProgress callback currently not supported
-      undefined,
-
-      // onError callback
-      function (err) {
-        console.error('An error happened.');
-      }
-    );
-    */
-
-    // 9 raycaster
-
-    //raycasting
-    // console.log(objects);
-    // const objects = [scene.getObjectByName('bio')];
-
-    /*
-
-    const raycaster = new THREE.Raycaster();
-    const pointer = new THREE.Vector2();
-    // find intersections
-    raycaster.setFromCamera(pointer, camera);
-
-    // calculate objects intersecting the picking ray
-    const intersects = raycaster.intersectObjects(scene.children, true);
-
-    for (let i = 0; i < intersects.length; i++) {
-      console.log(intersects[i]);
-      intersects[i].object.material.color.set(0xff0000);
-    }
-
-    window.onpointermove = (event) => {
-      pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
-      pointer.y = -(event.clientY / window.innerHeight) * 2 + 1;
-      // console.log(pointer);
-    };
-    */
 
     window.onresize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
@@ -191,8 +143,6 @@ const HomePage = () => {
       renderer.render(scene, camera);
     }
 
-    console.log(renderer.info, 'yet to cleaned');
-
     const audioElement = document.querySelector('.audio-btn');
     // Is it clicking twice because of react ??
     audioElement.addEventListener('click', () => {
@@ -210,13 +160,8 @@ const HomePage = () => {
 
     animate();
 
-    // const gridHelper = new THREE.GridHelper(10, 10);
-    // scene.add(gridHelper);
     return () => {
       cleanup();
-
-      console.log('unmount', renderer.getContext());
-      console.log('cleaned', renderer.info);
     };
   }, []);
 
