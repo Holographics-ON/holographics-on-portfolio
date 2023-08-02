@@ -236,6 +236,15 @@ a {
     position: initial;
   }
 
+  .audio-btn {
+    /* position: absolute; */
+    /* font-family: var(--font-mono); */
+    padding: 0.5em;
+    top: 2.5vw;
+    right: 3vw;
+    /* z-index: 1; */
+  }
+
   .scroll-down {
     display: initial;
   }
