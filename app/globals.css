@@ -65,11 +65,13 @@ a {
 .audio-btn {
   position: absolute;
   font-family: var(--font-mono);
+  border-radius: 5px;
   padding: 0.2em;
   top: 9vh;
   right: 3vw;
   z-index: 1;
 }
+
 .audio-btn:hover {
   cursor: pointer;
 }
@@ -82,7 +84,7 @@ a {
   height: 50px;
   width: 50px;
   border: red 7px dashed;
-  transform: translate3d(-50%, -40px, 0) rotate(45deg);
+  transform: translate3d(-50%, -25px, 0) rotate(45deg);
 }
 
 .scroll-down:hover {
@@ -237,8 +239,9 @@ a {
   }
 
   .audio-btn {
+    font-size: 1.5rem;
     padding: 0.5em;
-    top: 2.5vw;
+    top: 2vh;
   }
 
   .scroll-down {
