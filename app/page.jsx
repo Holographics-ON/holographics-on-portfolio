@@ -184,14 +184,15 @@ const HomePage = () => {
           technology company. After accomplishing all of my skills technically,
           I dedicated several years into refining my own creative talents out of
           curiosity. Following this passion soon landed me a position at an
-          award-winning creative agency working as digital analyst. Later on, I
-          received an opportunity to become a creative technologist for a start
-          up called Social Visuals.
+          award-winning creative agency working as a digital analyst. Later on,
+          I received an opportunity to become a creative technologist for a
+          start up called Social Visuals.
         </p>
         <p>
           My name is HON, I'm a creative developer at &hearts; with a special
           interest in the upcoming future of immersive 3D web experiences and
-          the latest trend of WebXR & WebGPU.
+          the latest trend of WebXR & WebGPU. [HOLD & DRAG TO ROTATE / SCROLL TO
+          ZOOM ]
         </p>
       </div>
       <div className="socials">
