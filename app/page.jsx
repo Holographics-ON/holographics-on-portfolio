@@ -191,7 +191,7 @@ const HomePage = () => {
         <p>
           My name is HON, I'm a creative developer at &hearts; with a special
           interest in the upcoming future of immersive 3D web experiences and
-          the latest trend of WebXR & WebGPU. [HOLD & DRAG TO ROTATE / SCROLL TO
+          the latest trend of WebXR & WebGPU.[ HOLD & DRAG TO ROTATE / SCROLL TO
           ZOOM ]
         </p>
       </div>
